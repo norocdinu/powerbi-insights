@@ -1,0 +1,29 @@
+# Build artifacts
+*.zip
+*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (if build tools added later)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+
+# Logs
+*.log
+
+# Placeholder file (replace with real screenshot.png)
+screenshot-placeholder.txt

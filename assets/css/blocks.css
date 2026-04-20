@@ -1,0 +1,259 @@
+/**
+ * PowerBI Insights — Block & Editor Styles
+ * Loaded in both frontend and Gutenberg editor.
+ */
+
+/* ============================================================
+   EDITOR ADJUSTMENTS
+   ============================================================ */
+
+.editor-styles-wrapper {
+  --clr-bg:          #f5f7fa;
+  --clr-surface:     #ffffff;
+  --clr-surface-2:   #eef1f6;
+  --clr-border:      #dde3ed;
+  --clr-text:        #1a1d2e;
+  --clr-text-muted:  #5a6175;
+  --clr-accent:      #0078d4;
+  --clr-accent-soft: #e6f2ff;
+  --clr-code-bg:     #1e2235;
+  --clr-code-text:   #e8eaf0;
+  --clr-tip-bg:      #e6f2ff;
+  --clr-tip-border:  #0078d4;
+  --clr-warn-bg:     #fff8e6;
+  --clr-warn-border: #f59e0b;
+  --radius:          8px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--clr-text);
+  max-width: 780px;
+}
+
+/* ============================================================
+   GUTENBERG BLOCK STYLES
+   ============================================================ */
+
+/* Quote block */
+.wp-block-quote {
+  border-left: 4px solid var(--clr-accent);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--clr-accent-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--clr-text-muted);
+  font-style: italic;
+}
+.wp-block-quote cite { font-size: .85rem; font-style: normal; display: block; margin-top: .5rem; }
+
+/* Pullquote */
+.wp-block-pullquote {
+  border-top: 4px solid var(--clr-accent);
+  border-bottom: 4px solid var(--clr-accent);
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: var(--clr-surface-2);
+}
+.wp-block-pullquote blockquote { border: none; background: none; padding: 0; }
+.wp-block-pullquote p { font-size: 1.25rem; font-weight: 600; color: var(--clr-text); font-style: italic; }
+
+/* Code block */
+.wp-block-code {
+  background: var(--clr-code-bg);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  overflow: auto;
+}
+.wp-block-code code {
+  color: var(--clr-code-text);
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: .875rem;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Preformatted */
+.wp-block-preformatted {
+  background: var(--clr-code-bg);
+  color: var(--clr-code-text);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: .875rem;
+  overflow-x: auto;
+}
+
+/* Separator */
+.wp-block-separator {
+  border: none;
+  border-top: 1px solid var(--clr-border);
+  margin: 2rem 0;
+}
+.wp-block-separator.is-style-wide { border-top-width: 2px; }
+.wp-block-separator.is-style-dots { border: none; text-align: center; }
+.wp-block-separator.is-style-dots::before { content: '···'; font-size: 1.5rem; color: var(--clr-text-muted); letter-spacing: .5em; }
+
+/* Image block */
+.wp-block-image img { border-radius: var(--radius); }
+.wp-block-image figcaption {
+  font-size: .85rem;
+  color: var(--clr-text-muted);
+  text-align: center;
+  margin-top: .5rem;
+}
+
+/* Gallery */
+.wp-block-gallery { gap: .75rem; }
+.wp-block-gallery .wp-block-image { border-radius: var(--radius); overflow: hidden; }
+
+/* Buttons */
+.wp-block-button__link {
+  background: var(--clr-accent);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: .65rem 1.4rem;
+  font-weight: 600;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.wp-block-button__link:hover { background: #005fa3; color: #fff; }
+.wp-block-button.is-style-outline .wp-block-button__link {
+  background: transparent;
+  border: 2px solid var(--clr-accent);
+  color: var(--clr-accent);
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+  background: var(--clr-accent);
+  color: #fff;
+}
+
+/* Table */
+.wp-block-table table { width: 100%; border-collapse: collapse; }
+.wp-block-table th, .wp-block-table td { padding: .75rem 1rem; border-bottom: 1px solid var(--clr-border); text-align: left; }
+.wp-block-table th { background: var(--clr-surface-2); font-weight: 600; font-size: .85rem; }
+.wp-block-table.is-style-stripes tr:nth-child(odd) td { background: var(--clr-surface-2); }
+
+/* Cover block */
+.wp-block-cover { border-radius: var(--radius); overflow: hidden; }
+
+/* Group block */
+.wp-block-group { padding: 2rem; background: var(--clr-surface-2); border-radius: var(--radius-lg); }
+.wp-block-group.has-background { border-radius: var(--radius); }
+
+/* Columns */
+.wp-block-columns { gap: 1.5rem; }
+
+/* Details / Summary */
+.wp-block-details {
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  background: var(--clr-surface-2);
+}
+.wp-block-details summary { font-weight: 600; cursor: pointer; }
+
+/* Notice block styles */
+.wp-block-group.is-style-tip-box {
+  background: var(--clr-tip-bg);
+  border-left: 4px solid var(--clr-tip-border);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.wp-block-group.is-style-warning-box {
+  background: var(--clr-warn-bg);
+  border-left: 4px solid var(--clr-warn-border);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ============================================================
+   CUSTOM BLOCK: POWER BI TIP (Editor Preview)
+   ============================================================ */
+
+.wp-block-powerbi-insights-powerbi-tip {
+  /* Shares styles from .highlight-box in style.css */
+}
+
+/* ============================================================
+   CUSTOM BLOCK: DAX SNIPPET (Editor Preview)
+   ============================================================ */
+
+.wp-block-powerbi-insights-dax-snippet .code-block-header {
+  background: #0d1117;
+}
+.wp-block-powerbi-insights-dax-snippet pre {
+  background: #1e2235;
+  margin: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* ============================================================
+   CUSTOM BLOCK: PBI EMBED (Editor Preview)
+   ============================================================ */
+
+.wp-block-powerbi-insights-pbi-embed {
+  /* Shares styles from .pbi-embed-wrap in style.css */
+}
+
+/* ============================================================
+   BLOCK STYLE VARIATIONS
+   ============================================================ */
+
+/* Card block style for Group */
+.wp-block-group.is-style-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  padding: 1.5rem;
+}
+
+/* ============================================================
+   RESPONSIVE EMBEDS
+   ============================================================ */
+
+.wp-block-embed__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.wp-block-embed__wrapper iframe,
+.wp-block-embed__wrapper object,
+.wp-block-embed__wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ============================================================
+   POST CONTENT LIST STYLES
+   ============================================================ */
+
+.entry-content ul:not([class]) {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+.entry-content ul:not([class]) li {
+  position: relative;
+  padding-left: .25rem;
+  margin-bottom: .4rem;
+}
+.entry-content ul:not([class]) li::before {
+  content: '';
+  position: absolute;
+  left: -1.1rem;
+  top: .65em;
+  width: 6px;
+  height: 6px;
+  background: var(--clr-accent);
+  border-radius: 50%;
+}
+.entry-content ol:not([class]) { padding-left: 1.75rem; }
+.entry-content ol:not([class]) li { margin-bottom: .4rem; }
+.entry-content ol:not([class]) li::marker { color: var(--clr-accent); font-weight: 700; }
