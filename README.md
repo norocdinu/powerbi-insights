@@ -12,7 +12,7 @@ A modern, minimalist WordPress theme built for Power BI, data analytics, and Mic
 ## Screenshots
 
 > Add your screenshots here after activating the theme.
-
+I am not shure how.
 ---
 
 ## Features
