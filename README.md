@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# powerbi-insights
-## test
-=======
+
 # PowerBI Insights — WordPress Theme
 
 A modern, minimalist WordPress theme built for Power BI, data analytics, and Microsoft Fabric professionals. Clean reading experience, dark/light mode, custom Gutenberg blocks, and DAX code support out of the box.
